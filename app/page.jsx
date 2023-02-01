@@ -4,6 +4,7 @@ import "../styles/globals.css"
 import SocialLinks from "../components/SocialLinks"
 
 import profilePicture from "../assets/img/profilePicture.jpg" //"../assets/img/Pau.jpg"
+import About from "../components/About"
 
 export default function Home() {
   return (
@@ -42,6 +43,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <About />
       <SocialLinks />
     </div>
   )
