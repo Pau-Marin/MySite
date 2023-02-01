@@ -2,11 +2,12 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md"
 
 import "../styles/globals.css"
 import SocialLinks from "../components/SocialLinks"
-
-import profilePicture from "../assets/img/profilePicture.jpg" //"../assets/img/Pau.jpg"
 import About from "../components/About"
 import Portfolio from "../components/Portfolio"
 import Experience from "../components/Experience"
+import Contact from "../components/Contact"
+
+import profilePicture from "../assets/img/profilePicture.jpg" //"../assets/img/Pau.jpg"
 
 export default function Home() {
   return (
@@ -48,6 +49,7 @@ export default function Home() {
       <About />
       <Portfolio />
       <Experience />
+      <Contact />
       <SocialLinks />
     </div>
   )
