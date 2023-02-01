@@ -44,7 +44,7 @@ export default function Navbar() {
               >
                 <Link href={url}>{name}</Link>
               </li>
-            ))}{" "}
+            ))}
           </ul>
         )}
       </nav>
