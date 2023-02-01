@@ -1,6 +1,7 @@
 "use client"
 
-import Link from "next/link"
+// import Link from "next/link"
+import { Link } from "react-scroll"
 import { useState } from "react"
 import { FaBars, FaTimes } from "react-icons/fa"
 
@@ -8,10 +9,11 @@ export default function Navbar() {
   const [nav, setNav] = useState(false)
 
   const links = [
-    { id: 1, url: "/", name: "home" },
-    { id: 2, url: "/about", name: "about" },
-    { id: 3, url: "/projects", name: "projects" },
-    { id: 4, url: "/contact", name: "contact" },
+    { id: 1, url: "home", name: "home" },
+    { id: 2, url: "about", name: "about" },
+    { id: 3, url: "projects", name: "projects" },
+    { id: 4, url: "experience", name: "experience" },
+    { id: 5, url: "contact", name: "contact" },
   ]
 
   return (
@@ -24,7 +26,9 @@ export default function Navbar() {
               key={id}
               className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
             >
-              <Link href={url}>{name}</Link>
+              <Link to={url} smooth duration={500}>
+                {name}
+              </Link>
             </li>
           ))}
         </ul>
@@ -42,7 +46,14 @@ export default function Navbar() {
                 key={id}
                 className="px-4 cursor-pointer capitalize py-6 text-4xl"
               >
-                <Link href={url}>{name}</Link>
+                <Link
+                  onClick={() => setNav(!nav)}
+                  to={url}
+                  smooth
+                  duration={500}
+                >
+                  {name}
+                </Link>
               </li>
             ))}
           </ul>
