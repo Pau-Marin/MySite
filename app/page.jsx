@@ -6,6 +6,7 @@ import SocialLinks from "../components/SocialLinks"
 import profilePicture from "../assets/img/profilePicture.jpg" //"../assets/img/Pau.jpg"
 import About from "../components/About"
 import Portfolio from "../components/Portfolio"
+import Experience from "../components/Experience"
 
 export default function Home() {
   return (
@@ -46,6 +47,7 @@ export default function Home() {
       </div>
       <About />
       <Portfolio />
+      <Experience />
       <SocialLinks />
     </div>
   )
