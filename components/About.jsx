@@ -11,25 +11,22 @@ export default function About() {
           </p>
         </div>
 
-        <p className="text-xl mt-20">
-          ¡Hola! Me llamo Pau y soy un desarrollador web apasionado con más de
-          10 años de experiencia. Me especializo en el desarrollo web con React
-          y NextJS, pero también tengo experiencia en otras tecnologías como
-          HTML, CSS, JavaScript y C#. He trabajado en una variedad de proyectos,
-          desde pequeñas aplicaciones web hasta proyectos de gran escala con
-          equipos de desarrollo. Mi experiencia también incluye gestión de
-          cambios en una empresa importante. En mi tiempo libre, me gusta seguir
-          aprendiendo nuevas habilidades y tecnologías para mejorar como
-          desarrollador.
+        <p className="text-xl">
+          Hello! My name is Pau and I'm a passionate developer. I've been
+          writting code for over 10 years. I'm currently focused on backend
+          development with both Express and NextJS using TypeScript but I have
+          experience with many other languages such as C#, Java or even CL.
         </p>
         <br />
         <p className="text-xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-          eaque dolorem asperiores nobis veniam eius repellat placeat maxime
-          ducimus? Assumenda consequuntur qui, amet eveniet, ab laboriosam
-          quidem quisquam nulla optio debitis nesciunt autem unde corrupti
-          libero sit aspernatur velit est hic perferendis. Esse culpa neque
-          atque blanditiis! Esse, atque eaque?
+          I've worked in lots of different projects, ranging from small web
+          applications to big projects with multiple developers teams, including
+          change management in a major company.
+        </p>
+        <br />
+        <p className="text-xl">
+          In my free time I like to keep learning new skills and technologies to
+          improve as a developer.
         </p>
       </div>
     </div>

@@ -21,19 +21,15 @@ export default function Home() {
         <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
           <div className="flex flex-col justify-center h-full">
             <h2 className="text-4xl sm:text-7xl font-bold text-white">
-              I'm a Full Stack Web Developer
+              I'm a Backend Developer
             </h2>
-            <p className="text-gray-500 py-4 max-w-md">
-              ¡Buenas! Me llamo Pau y soy un desarrollador web apasionado. He
-              estado escribiendo código durante más de 10 años y he trabajado
-              con varios lenguajes y herramientas. Actualmente, estoy enfocado
-              en el desarrollo web con React y NextJS. Si estás interesado en
-              ver algunos de mis proyectos, ¡dale un vistazo a mi portfolio!
+            <p className="text-gray-500 py-4 max-w-md text-justify">
+              Take a look at my projects!
             </p>
             <div>
               <Link
-                href={"/"}
-                // to="projects"
+                href={"#"}
+                // to={"projects"}
                 // smooth
                 // duration={500}
                 className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
