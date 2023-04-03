@@ -4,6 +4,7 @@ export default function Head({ title }) {
       <title>{title}</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <link rel="icon" href="/favicon.ico" />
+      {/* <style>{"* {border: 1px solid red;}"}</style> */}
     </>
   )
 }

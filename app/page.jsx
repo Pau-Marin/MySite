@@ -54,11 +54,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <About />
-      <Portfolio />
-      <Experience />
-      <Contact />
-      <SocialLinks />
+      <div className="flex flex-col justify-center items-center">
+        <About />
+        <Portfolio />
+        <Experience />
+        <Contact />
+        <SocialLinks />
+      </div>
     </div>
   )
 }
