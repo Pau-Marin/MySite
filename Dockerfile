@@ -1,26 +1,27 @@
-# Minimum node version
-FROM node:16-alpine
-
-# Working directory
+# Build stage
+FROM node:16-alpine as builder
 WORKDIR /usr/src/app
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json ./
-
-# If you are building your code for production
-# RUN npm ci --only=production
-RUN yarn
-
-# Own code
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
 COPY . .
+RUN yarn build
+
+# Run stage
+FROM node:16-alpine as runner
+WORKDIR /usr/src/app
+
+COPY --from=builder /usr/src/app/package.json .
+COPY --from=builder /usr/src/app/yarn.lock .
+COPY --from=builder /usr/src/app/next.config.js .
+COPY --from=builder /usr/src/app/postcss.config.js .
+COPY --from=builder /usr/src/app/tailwind.config.js .
+COPY --from=builder /usr/src/app/node_modules ./node_modules
+COPY --from=builder /usr/src/app/.next/standalone ./
+COPY --from=builder /usr/src/app/.next/static ./.next/static
 
 # Port
 EXPOSE 3000
 
-# Create production build
-RUN yarn build
-
 # Command to start server
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
