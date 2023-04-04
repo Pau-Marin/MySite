@@ -1,47 +1,63 @@
+import logoNextjs from "../assets/img/experience/logo-next.png"
+import logoReact from "../assets/img/experience/logo-react.svg"
+import logoRedux from "../assets/img/experience/logo-redux.svg"
+import logoTailwind from "../assets/img/experience/logo-tailwindcss.svg"
+import logoJavascript from "../assets/img/experience/logo-javascript.svg"
+import logoTypescript from "../assets/img/experience/logo-typescript.svg"
+import logoNode from "../assets/img/experience/logo-node.svg"
 import logoExpress from "../assets/img/experience/logo-express.png"
+import logoSequelize from "../assets/img/experience/logo-sequelize.png"
+import logoMongoose from "../assets/img/experience/logo-mongoose.png"
+import logoPostgresql from "../assets/img/experience/logo-postgresql.svg"
+import logoMongodb from "../assets/img/experience/logo-mongodb.svg"
+import logoUnity from "../assets/img/experience/logo-unity.png"
+import logoCsharp from "../assets/img/experience/logo-csharp.svg"
+import logoJava from "../assets/img/experience/logo-java.svg"
+import logoGit from "../assets/img/experience/logo-git.svg"
+import logoDocker from "../assets/img/experience/logo-docker.svg"
 
 export default function Experience() {
   const tecnologies = [
     {
       id: 1,
       name: "NextJS",
-      img: "https://profilinator.rishav.dev/skills-assets/nextjs.png",
+      img: logoNextjs.src,
       style: "shadow-gray-700",
     },
     {
       id: 2,
       name: "React",
-      img: "https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg",
+      img: logoReact.src,
       style: "shadow-sky-300",
     },
     {
       id: 3,
       name: "Redux",
-      img: "https://profilinator.rishav.dev/skills-assets/redux-original.svg",
+      img: logoRedux.src,
       style: "shadow-violet-600",
     },
     {
       id: 4,
       name: "Tailwind",
-      img: "https://profilinator.rishav.dev/skills-assets/tailwindcss.svg",
+      img: logoTailwind.src,
       style: "shadow-teal-300",
     },
     {
       id: 5,
       name: "JavaScript",
-      img: "https://profilinator.rishav.dev/skills-assets/javascript-original.svg",
+      img: logoJavascript.src,
       style: "shadow-yellow-300",
     },
     {
       id: 6,
       name: "TypeScript",
-      img: "https://profilinator.rishav.dev/skills-assets/typescript-original.svg",
+      img: logoTypescript.src,
       style: "shadow-blue-500",
     },
     {
       id: 7,
       name: "Node.js",
-      img: "https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg",
+      img: logoNode.src,
       style: "shadow-green-500",
     },
     {
@@ -53,55 +69,55 @@ export default function Experience() {
     {
       id: 9,
       name: "Sequelize",
-      img: "https://avatars.githubusercontent.com/u/3591786",
+      img: logoSequelize.src,
       style: "shadow-sky-500",
     },
     {
       id: 10,
       name: "Mongoose",
-      img: "https://camo.githubusercontent.com/a4bb207f53a07bd13cc9001408af82a05f9011ca1bd9938a473b9084cd77f298/68747470733a2f2f696d672e69636f6e73382e636f6d2f636f6c6f722f34382f3030303030302f6d6f6e676f6f73652e706e67",
+      img: logoMongoose.src,
       style: "shadow-red-600",
     },
     {
       id: 11,
       name: "PostgreSQL",
-      img: "https://profilinator.rishav.dev/skills-assets/postgresql-original-wordmark.svg",
+      img: logoPostgresql.src,
       style: "shadow-blue-400",
     },
     {
       id: 12,
       name: "MongoDB",
-      img: "https://profilinator.rishav.dev/skills-assets/mongodb-original-wordmark.svg",
+      img: logoMongodb.src,
       style: "shadow-green-600",
     },
     {
       id: 13,
       name: "Unity",
-      img: "https://profilinator.rishav.dev/skills-assets/unity.png",
+      img: logoUnity.src,
       style: "shadow-slate-600",
     },
     {
       id: 14,
       name: "C#",
-      img: "https://profilinator.rishav.dev/skills-assets/csharp-original.svg",
+      img: logoCsharp.src,
       style: "shadow-purple-500",
     },
     {
       id: 15,
       name: "Java",
-      img: "https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg",
+      img: logoJava.src,
       style: "shadow-rose-600",
     },
     {
       id: 16,
       name: "Git",
-      img: "https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg",
+      img: logoGit.src,
       style: "shadow-red-500",
     },
     {
       id: 17,
       name: "Docker",
-      img: "https://camo.githubusercontent.com/6819655dad2979647adee4b2f01fc7da674eb0bff06cf25bd576427f091064a1/68747470733a2f2f70726f66696c696e61746f722e7269736861762e6465762f736b696c6c732d6173736574732f646f636b65722d6f726967696e616c2d776f72646d61726b2e737667",
+      img: logoDocker.src,
       style: "shadow-sky-400",
     },
   ]

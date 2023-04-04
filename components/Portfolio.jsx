@@ -15,14 +15,14 @@ export default function Portfolio() {
       id: 2,
       name: "Emme-3D",
       img: projectEmme3d.src,
-      deploy: "https://emme-3-d.vercel.app",
+      deploy: "http://emme-3-d.vercel.app",
       github: "https://github.com/MacarenaRodriguez1993/Emme-3D",
     },
     {
       id: 3,
       name: "PIkemon",
       img: projectPikemon.src,
-      deploy: "https://pikemon.ddns.net",
+      deploy: "http://pikemon.ddns.net",
       github: "https://github.com/Pau-Marin/PI-Pokemon",
     },
     // {
