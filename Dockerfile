@@ -17,10 +17,11 @@ COPY --from=builder /usr/src/app/next.config.js .
 COPY --from=builder /usr/src/app/postcss.config.js .
 COPY --from=builder /usr/src/app/tailwind.config.js .
 COPY --from=builder /usr/src/app/node_modules ./node_modules
-COPY --from=builder /usr/src/app/.next ./.next
-
-# Command to start server
-CMD ["yarn", "start"]
+COPY --from=builder /usr/src/app/.next/standalone ./
+COPY --from=builder /usr/src/app/.next/static ./.next/static
 
 # Port
 EXPOSE 3000
+
+# Command to start server
+CMD ["yarn", "start"]
