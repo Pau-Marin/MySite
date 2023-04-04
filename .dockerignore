@@ -1,7 +1,10 @@
-node_modules
+.git
 .next
 .vscode
-.gitignore
-README.md
+node_modules
 .dockerignore
-.git
+.eslintrc.json
+.gitattributes
+.gitignore
+.prettierrc
+README.md
