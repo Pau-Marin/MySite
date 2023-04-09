@@ -1,7 +1,7 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa"
-import { HiOutlineMail } from "react-icons/hi"
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { HiOutlineMail } from 'react-icons/hi'
 
-export default function SocialLinks() {
+const SocialLinks = () => {
   const socials = [
     {
       id: 1,
@@ -10,8 +10,8 @@ export default function SocialLinks() {
           LinkedIn <FaLinkedin size={30} />
         </>
       ),
-      url: "https://www.linkedin.com/in/pau-marin/",
-      style: "rounded-tr-md",
+      url: 'https://www.linkedin.com/in/pau-marin/',
+      style: 'rounded-tr-md',
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ export default function SocialLinks() {
           GitHub <FaGithub size={30} />
         </>
       ),
-      url: "https://github.com/Pau-Marin",
+      url: 'https://github.com/Pau-Marin',
     },
     {
       id: 3,
@@ -29,8 +29,8 @@ export default function SocialLinks() {
           Mail <HiOutlineMail size={30} />
         </>
       ),
-      url: "mailto:pau.marin.jubete@gmail.com",
-      style: "rounded-br-md",
+      url: 'mailto:pau.marin.jubete@gmail.com',
+      style: 'rounded-br-md',
     },
   ]
 
@@ -56,3 +56,5 @@ export default function SocialLinks() {
     </div>
   )
 }
+
+export default SocialLinks
