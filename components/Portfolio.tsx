@@ -47,7 +47,7 @@ const Portfolio = () => {
 
   return (
     <div
-      data-name="projects"
+      id="projects"
       className="min-h-screen bg-gradient-to-b from-black to-gray-800 w-full text-white"
     >
       <div className="max-w-screen-lg mt-20 p-4 mx-auto flex flex-col justify-center w-full h-auto">
