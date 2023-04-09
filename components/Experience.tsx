@@ -124,7 +124,7 @@ export default function Experience() {
 
   return (
     <div
-      name={'experience'}
+      data-name="experience"
       className="min-h-screen bg-gradient-to-b from-gray-800 to-black w-full"
     >
       <div className="max-w-screen-lg mx-auto mt-20 p-4 flex flex-col justify-center w-full h-auto text-white">

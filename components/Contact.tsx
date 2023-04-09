@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <div
-      name={'contact'}
+      data-name="contact"
       className="w-full min-h-screen bg-gradient-to-b from-black to-gray-800 p-4 text-white"
     >
       <div className="flex flex-col mt-20 p-4 justify-center max-w-screen-lg mx-auto h-auto">
