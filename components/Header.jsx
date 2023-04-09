@@ -1,3 +1,5 @@
+"use client"
+
 import { Link } from "react-scroll"
 import { MdOutlineKeyboardArrowRight } from "react-icons/md"
 
