@@ -16,7 +16,7 @@ import logoJava from '../assets/img/experience/logo-java.svg'
 import logoGit from '../assets/img/experience/logo-git.svg'
 import logoDocker from '../assets/img/experience/logo-docker.svg'
 
-export default function Experience() {
+const Experience = () => {
   const tecnologies = [
     {
       id: 1,
@@ -151,3 +151,5 @@ export default function Experience() {
     </div>
   )
 }
+
+export default Experience

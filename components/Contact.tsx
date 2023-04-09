@@ -1,4 +1,4 @@
-export default function Contact() {
+const Contact = () => {
   return (
     <div
       data-name="contact"
@@ -44,3 +44,5 @@ export default function Contact() {
     </div>
   )
 }
+
+export default Contact

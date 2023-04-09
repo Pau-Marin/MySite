@@ -1,4 +1,4 @@
-export default function About() {
+const About = () => {
   return (
     <div
       data-name="about"
@@ -32,3 +32,5 @@ export default function About() {
     </div>
   )
 }
+
+export default About

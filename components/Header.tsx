@@ -1,11 +1,11 @@
-"use client"
+'use client'
 
-import { Link } from "react-scroll"
-import { MdOutlineKeyboardArrowRight } from "react-icons/md"
+import { Link } from 'react-scroll'
+import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 
-import profilePicture from "../assets/img/profilePicture.jpg"
+import profilePicture from '../assets/img/profilePicture.jpg'
 
-export default function Header() {
+const Header = () => {
   return (
     <div
       data-name="home"
@@ -42,3 +42,5 @@ export default function Header() {
     </div>
   )
 }
+
+export default Header

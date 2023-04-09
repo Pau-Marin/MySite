@@ -2,7 +2,7 @@ import projectEmme3d from '../assets/img/portfolio/project-emme3d.png'
 import projectPikemon from '../assets/img/portfolio/project-pikemon.png'
 import projectPortfolio from '../assets/img/portfolio/project-portfolio.png'
 
-export default function Portfolio() {
+const Portfolio = () => {
   const projects = [
     {
       id: 1,
@@ -91,3 +91,5 @@ export default function Portfolio() {
     </div>
   )
 }
+
+export default Portfolio

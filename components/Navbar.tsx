@@ -1,18 +1,18 @@
-"use client"
+'use client'
 
-import { Link } from "react-scroll"
-import { useState } from "react"
-import { FaBars, FaTimes } from "react-icons/fa"
+import { Link } from 'react-scroll'
+import { useState } from 'react'
+import { FaBars, FaTimes } from 'react-icons/fa'
 
-export default function Navbar() {
+const Navbar = () => {
   const [nav, setNav] = useState(false)
 
   const links = [
-    { id: 1, url: "home", name: "home" },
-    { id: 2, url: "about", name: "about" },
-    { id: 3, url: "projects", name: "projects" },
-    { id: 4, url: "experience", name: "experience" },
-    { id: 5, url: "contact", name: "contact" },
+    { id: 1, url: 'home', name: 'home' },
+    { id: 2, url: 'about', name: 'about' },
+    { id: 3, url: 'projects', name: 'projects' },
+    { id: 4, url: 'experience', name: 'experience' },
+    { id: 5, url: 'contact', name: 'contact' },
   ]
 
   return (
@@ -20,16 +20,17 @@ export default function Navbar() {
       <nav className="flex justify-between items-center w-full px-4 text-white bg-black fixed">
         <h1 className="text-5xl font-signature ml-2">Pau Marin Jubete</h1>
         <ul className="hidden md:flex">
-          {links.map(({ id, url, name }) => (
-            <li
-              key={id}
-              className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
-            >
-              <Link to={url} smooth duration={500}>
-                {name}
-              </Link>
-            </li>
-          ))}
+          {links &&
+            links.map(({ id, url, name }) => (
+              <li
+                key={id}
+                className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
+              >
+                <Link to={url} smooth duration={500}>
+                  {name}
+                </Link>
+              </li>
+            ))}
         </ul>
         <div
           onClick={() => setNav(!nav)}
@@ -40,24 +41,27 @@ export default function Navbar() {
 
         {nav && (
           <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
-            {links.map(({ id, url, name }) => (
-              <li
-                key={id}
-                className="px-4 cursor-pointer capitalize py-6 text-4xl"
-              >
-                <Link
-                  onClick={() => setNav(!nav)}
-                  to={url}
-                  smooth
-                  duration={500}
+            {links &&
+              links.map(({ id, url, name }) => (
+                <li
+                  key={id}
+                  className="px-4 cursor-pointer capitalize py-6 text-4xl"
                 >
-                  {name}
-                </Link>
-              </li>
-            ))}
+                  <Link
+                    onClick={() => setNav(!nav)}
+                    to={url}
+                    smooth
+                    duration={500}
+                  >
+                    {name}
+                  </Link>
+                </li>
+              ))}
           </ul>
         )}
       </nav>
     </header>
   )
 }
+
+export default Navbar
