@@ -26,7 +26,7 @@ export default function Home() {
             <p className="text-gray-500 py-4 max-w-md text-justify">
               Take a look at my projects!
             </p>
-            <div>
+            {/* <div>
               <Link
                 href={"#"}
                 // to={"projects"}
@@ -39,7 +39,7 @@ export default function Home() {
                   <MdOutlineKeyboardArrowRight size={25} className="ml-1" />
                 </span>
               </Link>
-            </div>
+            </div> */}
           </div>
           <div>
             <img
