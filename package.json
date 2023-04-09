@@ -24,6 +24,7 @@
     "@babel/eslint-parser": "7.19.1",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",
+    "@types/react-scroll": "1.8.6",
     "autoprefixer": "10.4.13",
     "eslint": "8.2.0",
     "eslint-config-prettier": "8.6.0",
