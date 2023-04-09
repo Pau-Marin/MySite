@@ -1,6 +1,6 @@
-import projectPortfolio from "../assets/img/portfolio/project-portfolio.png"
+import projectPortfolio from '../assets/img/portfolio/project-portfolio.png'
 
-export default function Head({ title }) {
+export default function Head({ title }: { title: string }) {
   return (
     <>
       <title>{title}</title>
