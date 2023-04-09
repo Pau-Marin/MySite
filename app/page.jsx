@@ -9,7 +9,7 @@ import Portfolio from "../components/Portfolio"
 import Experience from "../components/Experience"
 import Contact from "../components/Contact"
 
-import profilePicture from "../assets/img/profilePicture.jpg" //"../assets/img/Pau.jpg"
+import profilePicture from "../assets/img/profilePicture.jpg"
 
 export default function Home() {
   return (
