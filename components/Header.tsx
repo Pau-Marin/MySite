@@ -1,14 +1,14 @@
-"use client"
+'use client'
 
-import { Link } from "react-scroll"
-import { MdOutlineKeyboardArrowRight } from "react-icons/md"
+import { Link } from 'react-scroll'
+import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 
-import profilePicture from "../assets/img/profilePicture.jpg"
+import profilePicture from '../assets/img/profilePicture.jpg'
 
-export default function Header() {
+const Header = () => {
   return (
     <div
-      name="home"
+      id="home"
       className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
@@ -42,3 +42,5 @@ export default function Header() {
     </div>
   )
 }
+
+export default Header
