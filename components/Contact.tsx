@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <div
-      name="contact"
+      name={'contact'}
       className="w-full min-h-screen bg-gradient-to-b from-black to-gray-800 p-4 text-white"
     >
       <div className="flex flex-col mt-20 p-4 justify-center max-w-screen-lg mx-auto h-auto">
@@ -10,8 +10,8 @@ export default function Contact() {
             Contact
           </p>
           <p className="py-6">
-            Send me an email:{" "}
-            <a href={"mailto:hello@paumarin.com"}>hello@paumarin.com</a>
+            Send me an email:{' '}
+            <a href={'mailto:hello@paumarin.com'}>hello@paumarin.com</a>
           </p>
           {/* <p className="py-6">Let's talk</p> */}
         </div>

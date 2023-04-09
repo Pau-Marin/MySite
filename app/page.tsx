@@ -1,11 +1,11 @@
-import "../styles/globals.css"
+import '../styles/globals.css'
 
-import SocialLinks from "../components/SocialLinks"
-import About from "../components/About"
-import Portfolio from "../components/Portfolio"
-import Experience from "../components/Experience"
-import Contact from "../components/Contact"
-import Header from "../components/Header"
+import SocialLinks from '../components/SocialLinks'
+import About from '../components/About'
+import Portfolio from '../components/Portfolio'
+import Experience from '../components/Experience'
+import Contact from '../components/Contact'
+import Header from '../components/Header'
 
 export default function Home() {
   return (

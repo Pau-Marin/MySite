@@ -1,29 +1,29 @@
-import projectEmme3d from "../assets/img/portfolio/project-emme3d.png"
-import projectPikemon from "../assets/img/portfolio/project-pikemon.png"
-import projectPortfolio from "../assets/img/portfolio/project-portfolio.png"
+import projectEmme3d from '../assets/img/portfolio/project-emme3d.png'
+import projectPikemon from '../assets/img/portfolio/project-pikemon.png'
+import projectPortfolio from '../assets/img/portfolio/project-portfolio.png'
 
 export default function Portfolio() {
   const projects = [
     {
       id: 1,
-      name: "Portfolio Site",
+      name: 'Portfolio Site',
       img: projectPortfolio.src,
-      deploy: "/",
-      github: "https://github.com/Pau-Marin/Portfolio-Site/",
+      deploy: '/',
+      github: 'https://github.com/Pau-Marin/Portfolio-Site/',
     },
     {
       id: 2,
-      name: "Emme-3D",
+      name: 'Emme-3D',
       img: projectEmme3d.src,
-      deploy: "http://emme-3-d.vercel.app",
-      github: "https://github.com/MacarenaRodriguez1993/Emme-3D",
+      deploy: 'http://emme-3-d.vercel.app',
+      github: 'https://github.com/MacarenaRodriguez1993/Emme-3D',
     },
     {
       id: 3,
-      name: "PIkemon",
+      name: 'PIkemon',
       img: projectPikemon.src,
-      deploy: "http://pikemon.ddns.net",
-      github: "https://github.com/Pau-Marin/PI-Pokemon",
+      deploy: 'http://pikemon.ddns.net',
+      github: 'https://github.com/Pau-Marin/PI-Pokemon',
     },
     // {
     //   id: 4,
@@ -47,7 +47,7 @@ export default function Portfolio() {
 
   return (
     <div
-      name="projects"
+      name={'projects'}
       className="min-h-screen bg-gradient-to-b from-black to-gray-800 w-full text-white"
     >
       <div className="max-w-screen-lg mt-20 p-4 mx-auto flex flex-col justify-center w-full h-auto">
