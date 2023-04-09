@@ -1,6 +1,5 @@
 "use client"
 
-// import Link from "next/link"
 import { Link } from "react-scroll"
 import { useState } from "react"
 import { FaBars, FaTimes } from "react-icons/fa"
