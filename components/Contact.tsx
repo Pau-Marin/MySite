@@ -1,9 +1,11 @@
 'use client'
 
-import { sendContactForm } from '@/lib/api'
 import { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import { Contact } from '@/types/types'
+import { sendContactForm } from '@/lib/api'
 
 const initValues: Contact = { name: '', email: '', message: '' }
 const initState = { error: '', contact: initValues }
@@ -46,6 +48,17 @@ const Contact = () => {
 
       setState(initState)
       setTouched(initTouched)
+
+      toast.success('Message sent.', {
+        position: 'top-center',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'dark',
+      })
     } catch (error) {
       setState({
         ...state,
@@ -123,6 +136,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </div>
   )
 }
