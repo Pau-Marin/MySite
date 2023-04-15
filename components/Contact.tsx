@@ -2,7 +2,9 @@
 
 import { useState } from 'react'
 
-const initValues = { name: '', email: '', message: '' }
+import { Contact } from '@/types/types'
+
+const initValues: Contact = { name: '', email: '', message: '' }
 
 const Contact = () => {
   const [contact, setContact] = useState(initValues)
@@ -50,9 +52,7 @@ const Contact = () => {
           <p className="py-6">Let's talk</p>
         </div>
         <div className="flex justify-center items-center">
-          <form
-            className="flex flex-col w-full md:w-1/2"
-          >
+          <form className="flex flex-col w-full md:w-1/2">
             <input
               type="text"
               name="name"
