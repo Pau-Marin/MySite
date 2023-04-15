@@ -7,14 +7,11 @@ import { Contact } from '@/types/types'
 
 const initValues: Contact = { name: '', email: '', message: '' }
 const initState = { error: '', contact: initValues }
+const initTouched = { name: false, email: false, message: false }
 
 const Contact = () => {
   const [state, setState] = useState(initState)
-  const [touched, setTouched] = useState({
-    name: false,
-    email: false,
-    message: false,
-  })
+  const [touched, setTouched] = useState(initTouched)
 
   const { contact, error } = state
 
@@ -48,7 +45,7 @@ const Contact = () => {
       await sendContactForm(contact)
 
       setState(initState)
-      setTouched({ name: false, email: false, message: false })
+      setTouched(initTouched)
     } catch (error) {
       setState({
         ...state,
