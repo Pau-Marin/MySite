@@ -16,7 +16,9 @@ export async function POST(req: Request) {
     })
     return new Response('OK', { status: 203 })
   } catch (error) {
+    if (error instanceof Error)
+      return new Response(error.message, { status: 400 })
+
     console.log(error)
-    return new Response(error.message, { status: 400 })
   }
 }

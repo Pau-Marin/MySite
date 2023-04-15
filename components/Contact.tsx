@@ -60,10 +60,12 @@ const Contact = () => {
         theme: 'dark',
       })
     } catch (error) {
-      setState({
-        ...state,
-        error: error.message,
-      })
+      if (error instanceof Error)
+        setState({
+          ...state,
+          error: error.message,
+        })
+      else console.log(error)
     }
   }
 
