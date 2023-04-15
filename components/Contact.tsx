@@ -1,5 +1,6 @@
 'use client'
 
+import { sendContactForm } from '@/lib/api'
 import { useState } from 'react'
 
 import { Contact } from '@/types/types'
@@ -33,6 +34,13 @@ const Contact = () => {
       ...contact,
       [e.target.name]: e.target.value,
     })
+  }
+
+  const onSubmit = async (e: React.SyntheticEvent) => {
+    e.preventDefault()
+    await sendContactForm(contact)
+    setContact(initValues)
+    setTouched({ name: false, email: false, message: false })
   }
 
   return (
@@ -93,7 +101,11 @@ const Contact = () => {
               <p className="text-red-600">Required</p>
             )}
             <p className="text-neutral-500">* Required fields.</p>
-            <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
+            <button
+              className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300"
+              disabled={!contact.name || !contact.email || !contact.message}
+              onClick={onSubmit}
+            >
               Send!
             </button>
           </form>
