@@ -6,14 +6,17 @@ import { useState } from 'react'
 import { Contact } from '@/types/types'
 
 const initValues: Contact = { name: '', email: '', message: '' }
+const initState = { error: '', contact: initValues }
 
 const Contact = () => {
-  const [contact, setContact] = useState(initValues)
+  const [state, setState] = useState(initState)
   const [touched, setTouched] = useState({
     name: false,
     email: false,
     message: false,
   })
+
+  const { contact, error } = state
 
   const onBlur = (
     e:
@@ -30,17 +33,28 @@ const Contact = () => {
       | React.ChangeEvent<HTMLInputElement>
       | React.ChangeEvent<HTMLTextAreaElement>
   ) => {
-    setContact({
-      ...contact,
-      [e.target.name]: e.target.value,
+    setState({
+      ...state,
+      contact: {
+        ...state.contact,
+        [e.target.name]: e.target.value,
+      },
     })
   }
 
   const onSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault()
-    await sendContactForm(contact)
-    setContact(initValues)
-    setTouched({ name: false, email: false, message: false })
+    try {
+      await sendContactForm(contact)
+
+      setState(initState)
+      setTouched({ name: false, email: false, message: false })
+    } catch (error) {
+      setState({
+        ...state,
+        error: error.message,
+      })
+    }
   }
 
   return (
@@ -53,6 +67,7 @@ const Contact = () => {
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Contact
           </p>
+          {error && <p className="text-red-600">{error}</p>}
           {/* <p className="py-6">
             Send me an email:{' '}
             <a href={'mailto:hello@paumarin.com'}>hello@paumarin.com</a>
