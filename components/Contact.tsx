@@ -44,20 +44,19 @@ const Contact = () => {
   const onSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault()
     try {
-      await sendContactForm(contact)
-
-      setState(initState)
-      setTouched(initTouched)
-
-      toast.success('Message sent.', {
-        position: 'top-center',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'dark',
+      await sendContactForm(contact).then(() => {
+        toast.success('Message sent.', {
+          position: 'top-center',
+          autoClose: 2500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'dark',
+        })
+        setState(initState)
+        setTouched(initTouched)
       })
     } catch (error) {
       if (error instanceof Error)
