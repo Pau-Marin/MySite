@@ -89,12 +89,8 @@ const Contact = () => {
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Contact
           </p>
-          {error && <p className="text-red-600">{error}</p>}
-          {/* <p className="py-6">
-            Send me an email:{' '}
-            <a href={'mailto:hello@paumarin.com'}>hello@paumarin.com</a>
-          </p> */}
           <p className="py-6">Let's talk</p>
+          {error && <p className="text-red-600">{error}</p>}
         </div>
         <div className="flex justify-center items-center">
           <form className="flex flex-col w-full md:w-1/2">
