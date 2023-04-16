@@ -168,7 +168,11 @@ const Contact = () => {
             )}
             <p className="text-neutral-500">* Required fields.</p>
             <button
-              className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300"
+              className={
+                !contact.name || !contact.email || !contact.message
+                  ? 'bg-blue-500 text-white font-bold px-6 py-3 my-8 mx-auto flex items-center rounded-md opacity-50 cursor-not-allowed'
+                  : 'text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300'
+              }
               disabled={!contact.name || !contact.email || !contact.message}
               onClick={onSubmit}
             >
