@@ -59,23 +59,25 @@ const Contact = () => {
         setTouched(initTouched)
       })
     } catch (error) {
-      if (error instanceof Error)
+      if (error instanceof Error) {
         setState({
           ...state,
           error: error.message,
         })
-      else console.log(error)
-
-      toast.error('Oops, there was an error sending the email.', {
-        position: 'top-center',
-        autoClose: 2500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'dark',
-      })
+        toast.error(
+          `Oops, there was an error sending the email: ${error.message}`,
+          {
+            position: 'top-center',
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'dark',
+          }
+        )
+      } else console.log(error)
     }
   }
 
