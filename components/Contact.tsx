@@ -65,6 +65,7 @@ const Contact = () => {
           error: error.message,
         })
       else console.log(error)
+
       toast.error('Oops, there was an error sending the email.', {
         position: 'top-center',
         autoClose: 2500,
