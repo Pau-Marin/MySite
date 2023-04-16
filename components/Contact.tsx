@@ -10,6 +10,11 @@ import { sendContactForm } from '@/lib/api'
 const initValues: Contact = { name: '', email: '', message: '' }
 const initState = { error: '', contact: initValues }
 const initTouched = { name: false, email: false, message: false }
+const validationRegex = {
+  name: new RegExp('^[a-zA-Z\\s]+$'),
+  email: new RegExp('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'),
+  message: new RegExp('^.+$'),
+}
 
 const Contact = () => {
   const [state, setState] = useState(initState)
@@ -41,9 +46,35 @@ const Contact = () => {
     })
   }
 
+  const checkRegex = (data: Contact) => {
+    // Obtener los valores de los campos del formulario
+    const name = data.name
+    const email = data.email
+    const message = data.message
+
+    // Validar cada campo usando el regex correspondiente
+    const isValidName = validationRegex.name.test(name)
+    const isValidEmail = validationRegex.email.test(email)
+    const isValidMessage = validationRegex.message.test(message)
+
+    // Si algún campo no es válido, mostrar un mensaje de error
+    if (!isValidName) {
+      throw new Error('Invalid name.')
+    }
+
+    if (!isValidEmail) {
+      throw new Error('Invalid email.')
+    }
+
+    if (!isValidMessage) {
+      throw new Error("Message can't be empty.")
+    }
+  }
+
   const onSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault()
     try {
+      checkRegex(contact)
       await sendContactForm(contact).then(() => {
         toast.success('Message sent.', {
           position: 'top-center',
