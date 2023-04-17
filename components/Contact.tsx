@@ -13,7 +13,6 @@ const initTouched = { name: false, email: false, message: false }
 const validationRegex = {
   name: new RegExp('^[a-zA-Z\\s]+$'),
   email: new RegExp('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'),
-  message: new RegExp('^.+$'),
 }
 
 const Contact = () => {
@@ -55,7 +54,7 @@ const Contact = () => {
     // Validar cada campo usando el regex correspondiente
     const isValidName = validationRegex.name.test(name)
     const isValidEmail = validationRegex.email.test(email)
-    const isValidMessage = message.length != 0 && !message.includes(' ')
+    const isValidMessage = !(message.length == 0 && message.includes(' '))
 
     // Si algún campo no es válido, mostrar un mensaje de error
     if (!isValidName) {
