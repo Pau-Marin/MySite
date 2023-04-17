@@ -1,5 +1,6 @@
 import { Contact } from '@/types/types'
 import { mailOptions, transporter } from '@/config/nodemailer'
+import { NextResponse } from 'next/server'
 
 const CONTACT_MESSAGE_FIELDS = {
   name: 'Name',
@@ -34,10 +35,10 @@ export async function POST(req: Request) {
       ...generateEmailContent(data),
       subject: `Web message from ${data.name}`,
     })
-    return new Response('OK', { status: 203 })
+    return NextResponse.json({ status: 203, ok: true })
   } catch (error) {
     if (error instanceof Error)
-      return new Response(error.message, { status: 400 })
+      return NextResponse.json({ status: 400, ok: true })
     else console.log(error)
   }
 
