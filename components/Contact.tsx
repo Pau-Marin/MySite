@@ -55,7 +55,7 @@ const Contact = () => {
     // Validar cada campo usando el regex correspondiente
     const isValidName = validationRegex.name.test(name)
     const isValidEmail = validationRegex.email.test(email)
-    const isValidMessage = validationRegex.message.test(message)
+    const isValidMessage = message.length != 0 && !message.includes(' ')
 
     // Si algún campo no es válido, mostrar un mensaje de error
     if (!isValidName) {
